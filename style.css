@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+@import url(./css/media.css);
+@import url(./css/nav.css);
+:root {
+  ---Purple: #fb72ff;
+  --Blue: #4cabe1;
+  --Green: #62eb9a;
+  --NeonBlue: #60fdf4;
+  --Yellow: #ffd426;
+  --Black: #000000;
+  --White: #ffffff;
+  /* Margin */
+  --mg-1: 1rem;
+  --mg-2: 2rem;
+  --mg-3: 3rem;
+  --mg-4: 4rem;
+  /* font */
+  --Nunito: "Nunito Sans", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-family: var(--Nunito);
+  color: var(--White);
+  background: var(--Black);
+}
+.padding {
+  padding-inline: 50px;
+}
+
+/* hero */
+.hero {
+  height: 60dvh;
+  text-align: center;
+  margin-bottom: 10rem;
+}
+.hero-item:nth-of-type(1) {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-item:nth-of-type(2) {
+  background: url(./img/svg.svg);
+  background-size: COVER;
+  background-repeat: no-repeat;
+  height: 100%;
+  transition: 2s opacity ease-in;
+  animation: opacities 3s normal;
+  margin-bottom: 10rem;
+}
+@keyframes opacities {
+  0% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.hero h2 {
+  margin-top: 1rem;
+  width: 60%;
+  font-size: var(--mg-2);
+  text-align: left;
+}
+.relative {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero img {
+  height: 100%;
+  width: 100vw;
+}
+
+/* hero ends */
+
+/* grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: var(--mg-4);
+  gap: 30px;
+}
+.grid-item {
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid #fb72ff;
+  cursor: pointer;
+}
+
+.grid-item:hover {
+  transform: scale(1.05);
+  box-shadow: 2px 4px 30px var(---Purple);
+}
+.grid-item p {
+  font-size: 0.7rem;
+  margin: 1rem 0;
+}
+/* grid */
+
+.Move {
+  transition: 2s opacity ease-in;
+  animation: move 1.4s infinite;
+  margin-bottom: 10rem;
+}
+@keyframes move {
+  0% {
+    opacity: 1;
+    transform: translateX(1000px);
+  }
+  100% {
+    transform: translateX(-200px);
+  }
+}
