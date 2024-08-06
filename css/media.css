@@ -2,6 +2,16 @@
   .grid {
     grid-template-columns: repeat(2, 1fr) !important;
   }
+  .rocket-grid-item:last-child{
+    display: flex;
+    flex-direction: column !important;
+    max-width:300px !important;
+    margin-bottom: 3rem;
+    font-size: 1rem;
+  }
+  .rocket-grid-item p{
+    font-size: 0.9rem !important;
+  }
 }
 @media screen and (max-width: 768px) {
   .hero {
@@ -30,6 +40,16 @@
     margin-bottom: var(--mg-4);
     gap: 30px;
   }
+  .rocket-grid-item:last-child{
+    display: flex;
+    flex-direction: column !important;
+    max-width:300px !important;
+    margin-bottom: 3rem;
+    font-size: 1rem;
+  }
+  .rocket-grid-item p{
+    font-size: 0.1rem;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -48,6 +68,13 @@
     flex-direction: column;
     margin-bottom: var(--mg-4);
     gap: 30px;
+  }
+  .rocket-grid-item:last-child{
+    display: flex;
+    flex-direction: column !important;
+    max-width:300px !important;
+    margin-bottom: 3rem;
+    font-size: 1rem;
   }
 }
 @media screen and (max-width: 320px) {
@@ -72,5 +99,10 @@
   }
   .hero-item:nth-of-type(1) {
     justify-content: start !important;
+  }
+}
+@media screen and (min-width: 1040px) {
+  .img-grid img {
+    height: 300px;
   }
 }

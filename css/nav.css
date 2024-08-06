@@ -1,19 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 :root {
-  --primary-color: #f4f4f4;
-  --dark-color:   #62eb9a;
-  --secondary-color:   #f4f4f4;
-  --tetiary-color: #5e0349;
-  --border-color: #b4becb;
- 
-
-  --white: #fff;
-  --font-size: 16px;
+  ---Purple: #fb72ff;
+  --Blue: #4cabe1;
+  --Green: #62eb9a;
+  --NeonBlue: #60fdf4;
+  --Yellow: #ffd426;
+  --Black: #000000;
+  --White: #ffffff;
+  /* Margin */
+  --mg-1: 1rem;
+  --mg-2: 2rem;
+  --mg-3: 3rem;
+  --mg-4: 4rem;
+  /* font */
+  --Nunito: "Nunito Sans", sans-serif;
 }
 
 body {
@@ -25,7 +31,10 @@ body {
   font-weight: 500;
   font-size: 16px;
   text-decoration: none;
-  color: var(--secondary-color);
+  color: var(--White);
+}
+li a:hover {
+  color: var(---Purple) !important;
 }
 .nav {
   display: flex;
@@ -54,6 +63,21 @@ header {
 .nav h2 {
   color: var(--secondary-color);
   cursor: pointer;
+  font-size: 1.3rem;
+}
+.ri-infinity-line {
+  display: inline-block;
+  animation: rotateText 2s linear;
+  transition: 2s rotate ease-in;
+}
+@keyframes rotateText {
+  from {
+    transform: rotate(0deg);
+    color: var(---Purple);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 .nav__links {
   list-style: none;
@@ -88,7 +112,7 @@ button:hover {
   display: block;
   color: var(--dark-color) !important;
 }
-@media (max-width: 788px) {
+@media (max-width: 888px) {
   nav {
     width: 100vw;
     position: fixed;
@@ -107,7 +131,7 @@ button:hover {
     flex-direction: column;
     height: 100vh;
     padding: min(30vh, 10rem) 2rem;
-    background: hsla(236, 100%, 9%, 0.75);
+    background: hsla(0, 0%, 0%, 0.75);
     backdrop-filter: blur(1rem);
     transform: translateX(100%);
     transition: 0.5s ease;
@@ -134,7 +158,7 @@ button:hover {
 
   .nav__links li:hover {
     color: #ffffff;
-    background: #051a7b;
+    background: #ff00f7;
   }
   .nav__links a,
   .nav__links a:hover {
@@ -155,7 +179,6 @@ button:hover {
     width: 1rem;
     aspect-ratio: 1;
     top: 2rem;
-    right: 30rem;
     z-index: 9999;
     background: none !important;
   }
@@ -177,8 +200,21 @@ button:hover {
 @media (max-width: 787px) {
   .mobile-nav-toggle {
     display: block;
-    top: 2rem;
-    right: 27rem;
+    top: 1.4rem;
+    right: 15rem;
+    font-size: 2rem;
+  }
+  .fl-2 {
+    display: flex;
+    align-items: start;
+  }
+}
+@media (max-width: 627px) {
+  .mobile-nav-toggle {
+    display: block;
+    top: 1.4rem;
+    right: 15rem;
+    font-size: 2rem;
   }
   .fl-2 {
     display: flex;
@@ -187,14 +223,24 @@ button:hover {
 }
 @media (max-width: 570px) {
   .mobile-nav-toggle {
-    top: 2rem;
-    right: 20rem;
+    top: 1.2rem;
+    right: 10rem;
   }
 }
-@media (max-width: 450px) {
+@media (max-width: 462px) {
   .mobile-nav-toggle {
     top: 2rem;
     right: 15rem;
+  }
+  .hero-grid-item:first-child {
+    padding: 10rem 2rem !important;
+    z-index: 200;
+  }
+}
+@media (max-width: 350px) {
+  .mobile-nav-toggle {
+    top: 2rem;
+    right: 10rem;
   }
   .hero-grid-item:first-child {
     padding: 10rem 2rem !important;

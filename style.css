@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
 @import url(./css/media.css);
 @import url(./css/nav.css);
+@import url(./css/form.css);
 :root {
   ---Purple: #fb72ff;
   --Blue: #4cabe1;
@@ -83,11 +84,21 @@ body {
 /* hero ends */
 
 /* grid */
+.section-text{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  text-align: center !important;
+  margin-top: 5rem !important;
+  height: 200px;
+  font-size: 0.8rem;
+}
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   margin-bottom: var(--mg-4);
   gap: 30px;
+ 
 }
 .grid-item {
   padding: 1rem;
@@ -107,16 +118,74 @@ body {
 /* grid */
 
 .Move {
+  display: inline-block;
   transition: 2s opacity ease-in;
-  animation: move 1.4s infinite;
+  animation: move 3s infinite alternate-reverse;
   margin-bottom: 10rem;
 }
 @keyframes move {
   0% {
     opacity: 1;
-    transform: translateX(1000px);
+    transform: translateX(200px);
   }
-  100% {
+  10% {
+    opacity: 1;
+    transform:rotate(350deg);
+  }
+
+  80% {
+  
+    transform:rotate(90deg);
+  }
+  100%{
     transform: translateX(-200px);
   }
+}
+
+/* img src */
+.rocket-fixed{
+  height: 300px;
+  width: 100%;
+  background-image: url('/img/pikaso_texttoimage_cyberpunk-astronaut-thumbs-up-vaporwave-neon-color.jpeg'); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin-bottom: 10rem;
+}
+.rocket-grid{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.rocket-grid-item{
+  padding: 1rem;
+  max-width: 300px;
+  border: 1px solid var(--NeonBlue);
+  border-radius: 10px;
+}
+.rocket-grid-item img{
+  height: 180px;
+  background-size: cover;
+ 
+}
+.rocket-grid-item p{
+  font-size: .5rem;
+  margin: 1rem;
+}
+.rocket-grid-item:last-child{
+  display: flex;
+  flex-direction: row;
+  max-width: 80vw;
+  margin-bottom: 3rem;
+}
+.rocket-grid-item:last-child p{
+  font-size: 0.9rem;
+}
+/* cgi */
+.cgi img{
+  height: 300px;
+  border-radius: 50%;
 }
